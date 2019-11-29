@@ -1,0 +1,31 @@
+.header__image {
+    max-height: 50vh;
+    height: 100%;
+}
+
+.header__wrapper {
+    display: grid;
+    grid-gap: 1rem;
+}
+
+.header__left {
+    // max-width: 400px;
+    // min-width: 60%;
+}
+
+.header__right {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center 80%;
+    background-image: url("/img/svg/shadow.svg");
+}
+
+@media screen and (min-width: 760px) {
+    .header__wrapper {
+        grid-template-columns: repeat(auto-fit, minmax(300px, auto));
+        grid-template-rows: repeat(auto-fit, auto);
+    }
+}

@@ -1,0 +1,39 @@
+.btn {
+    display: inline-block;
+    font-size: 16px;
+    font-weight: 700;
+    padding: .5em 2em;
+    border-radius: 1.5em;
+    border: 2px solid var(--color-1);
+    transition: all .2s ease;
+}
+
+.btn:hover {
+    background-color: var(--color-1);
+    color: var(--white);
+
+    &>* {
+        color: var(--white);
+    }
+}
+
+.btn--lg {
+    padding: 1.5em 3em;
+    color: var(--white);
+    background-image: var(--gradient-purple);
+    border: none;
+
+    &:hover {
+        filter: brightness(1) hue-rotate(-10deg);
+    }
+}
+
+.btn--nav {
+    margin: 0;
+}
+
+@supports (scroll-behavior: smooth) {
+    html {
+        scroll-behavior: smooth;
+    }
+}

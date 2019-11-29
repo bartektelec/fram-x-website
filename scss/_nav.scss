@@ -1,0 +1,133 @@
+/* NAVIGATION */
+.nav {
+    position: fixed;
+    z-index: 10;
+    width: 100%;
+    background-color: var(--white);
+}
+
+.nav__wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.nav__logo a img {
+    margin: .5rem 0;
+    height: 1.75rem;
+    transition: filter .3s ease;
+    will-change: filter;
+}
+
+.nav__logo a img:hover {
+    filter: brightness(120%);
+}
+
+/* HAMBURGER */
+.menu__checkbox {
+    display: none;
+}
+
+.menu__button {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 1.5rem;
+    width: 2rem;
+    cursor: pointer;
+}
+
+.burger__bar {
+    height: 3px;
+    width: 100%;
+    border-radius: 2px;
+    transform-origin: 1px;
+    background-color: var(--primary);
+    transition-property: transform;
+    will-change: transform;
+    transition: .3s ease;
+}
+
+
+/* ANIMATIONS ON CHECK */
+.menu__checkbox:checked+.menu__button>.burger__bar:nth-child(1) {
+    transform: rotate(45deg);
+}
+
+.menu__checkbox:checked+.menu__button>.burger__bar:nth-child(2) {
+    transform: translateX(100%);
+    opacity: 0;
+    // opacity: 0;
+
+}
+
+.menu__checkbox:checked+.menu__button>.burger__bar:nth-child(3) {
+    transform: rotate(-45deg);
+}
+
+
+
+.nav__menu {
+    position: fixed;
+    top: 3rem;
+    left: 0;
+    width: 100%;
+    text-align: center;
+    padding: 1rem 0;
+    background-color: var(--white);
+    transform: translateX(100%);
+    transition: transform .3s ease;
+    will-change: transform;
+}
+
+.menu__item {
+    padding: 2rem 0;
+}
+
+.menu__item a {
+    font-size: 1.625rem;
+    font-weight: 700;
+    opacity: .8;
+
+    &:hover {
+        opacity: 1;
+    }
+
+    // margin: 2rem;
+}
+
+.menu__checkbox:checked~.nav__menu {
+    transform: translateX(0);
+}
+
+@media screen and (min-width: 1024px) {
+    .nav__wrapper {
+        // max-height: 100px;
+    }
+
+    .nav__menu {
+        position: static;
+        height: 100%;
+        padding: .5rem;
+        transform: translateX(0);
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+        // width: auto;
+    }
+
+    .menu__item {
+        display: flex;
+        padding: 0rem;
+        margin-left: 2em;
+
+        & a {
+            margin: 0;
+            font-size: .5rem;
+        }
+    }
+
+    .menu__button {
+        display: none;
+    }
+}
