@@ -18,7 +18,7 @@
 }
 
 .btn--lg {
-    padding: 1.5em 3em;
+    padding: 1em 3em;
     color: var(--white);
     background-image: var(--gradient-purple);
     border: none;
@@ -30,6 +30,12 @@
 
 .btn--nav {
     margin: 0;
+}
+
+@media screen and (min-width: 768px) {
+    .btn--lg {
+        padding: 1.5em 3em;
+    }
 }
 
 @supports (scroll-behavior: smooth) {
