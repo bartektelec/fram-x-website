@@ -32,6 +32,8 @@
 
 .text--subtitle {
     @extend .centered;
+    font-size: calc(20px + (32 - 20) * ((100vw - 320px) / (1440 - 320)));
+
     margin: 1em;
     font-weight: 700;
 }
@@ -42,6 +44,8 @@
 
 .text--medium {
     font-size: 24px;
+    font-size: calc(16px + (24 - 16) * ((100vw - 320px) / (1440 - 320)));
+
     font-weight: 400;
 }
 
@@ -59,6 +63,14 @@
     .header__subtitle {
         font-size: 16px;
     }
+
+    .text--subtitle {
+        font-size: 20px;
+    }
+
+    .text--medium {
+        font-size: 16px;
+    }
 }
 
 @media screen and (min-width: 1440px) {
@@ -69,5 +81,13 @@
 
     .header__subtitle {
         font-size: 32px;
+    }
+
+    .text--subtitle {
+        font-size: 32px;
+    }
+
+    .text--medium {
+        font-size: 24px;
     }
 }

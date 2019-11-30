@@ -46,3 +46,19 @@
 .card__title {
     font-size: 24px;
 }
+
+.open-source__image {
+    height: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 2rem;
+}
+
+.open-source__image img {
+    max-height: 100%;
+}
+
+.open-source__content * {
+    margin: 1rem;
+}
