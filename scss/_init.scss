@@ -38,7 +38,14 @@ $baseFontSize : 16;
 .container {
     margin: 0 auto;
     padding: 0 1rem;
-    max-width: 700px;
+    max-width: calc(700px + (1400 - 700) * ((100vw - 320px) / (1980 - 320)));
+
+}
+
+@media screen and (max-width: 320px) {
+    .container {
+        max-width: 700px;
+    }
 }
 
 @media screen and (min-width: 768px) {
@@ -57,19 +64,19 @@ $baseFontSize : 16;
     }
 
     .container {
-        max-width: 960px;
+        // max-width: 960px;
     }
 }
 
 @media screen and (min-width: 1280px) {
     .container {
-        max-width: 1200px;
+        // max-width: 1200px;
     }
 }
 
 @media screen and (min-width: 1440px) {
     .container {
-        max-width: 1360px;
+        // max-width: 1360px;
     }
 }
 
@@ -81,6 +88,6 @@ $baseFontSize : 16;
 
 @media screen and (min-width: 2560px) {
     .container {
-        max-width: 1600px;
+        // max-width: 1600px;
     }
 }

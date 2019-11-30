@@ -1,15 +1,19 @@
 @import url('https://fonts.googleapis.com/css?family=Raleway:400,700&display=swap');
 
+.centered {
+    text-align: center;
+}
 
 .header__subtitle {
     margin-bottom: 1rem;
     font-weight: 700;
-    font-size: rem(18);
+    font-size: calc(18px + (32 - 18) * ((100vw - 320px) / (1440 - 320)));
 }
+
 
 .header__title {
     margin-bottom: 1rem;
-    font-size: rem(40);
+    font-size: calc(40px + (80 - 40) * ((100vw - 320px) / (1440 - 320)));
     font-weight: 700;
 }
 
@@ -20,10 +24,15 @@
 }
 
 .text--title {
+    @extend .centered;
+    margin: 1em;
+    font-size: 2rem;
     font-weight: 700;
 }
 
 .text--subtitle {
+    @extend .centered;
+    margin: 1em;
     font-weight: 700;
 }
 
@@ -32,9 +41,33 @@
 }
 
 .text--medium {
+    font-size: 24px;
     font-weight: 400;
 }
 
 .text--small {
+    font-size: 18px;
     font-weight: 400;
+}
+
+@media screen and (max-width: 320px) {
+
+    .header__title {
+        font-size: 40px;
+    }
+
+    .header__subtitle {
+        font-size: 16px;
+    }
+}
+
+@media screen and (min-width: 1440px) {
+
+    .header__title {
+        font-size: 80px;
+    }
+
+    .header__subtitle {
+        font-size: 32px;
+    }
 }
