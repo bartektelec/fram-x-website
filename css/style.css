@@ -47,7 +47,7 @@
 
 @media screen and (min-width: 1980px) {
   .container {
-    max-width: 1440px;
+    max-width: 1400px;
   }
 }
 
@@ -58,12 +58,12 @@
 .header__subtitle {
   margin-bottom: 1rem;
   font-weight: 700;
-  font-size: calc(18px + (32 - 18) * ((100vw - 320px) / (1440 - 320)));
+  font-size: calc(18px + (32 - 18) * ((100vw - 320px) / (1980 - 320)));
 }
 
 .header__title {
   margin-bottom: 1rem;
-  font-size: calc(40px + (80 - 40) * ((100vw - 320px) / (1440 - 320)));
+  font-size: calc(40px + (80 - 40) * ((100vw - 320px) / (1980 - 320)));
   font-weight: 700;
 }
 
@@ -80,7 +80,7 @@
 }
 
 .text--subtitle {
-  font-size: calc(20px + (32 - 20) * ((100vw - 320px) / (1440 - 320)));
+  font-size: calc(20px + (32 - 20) * ((100vw - 320px) / (1980 - 320)));
   margin: 1em;
   font-weight: 700;
 }
@@ -91,13 +91,17 @@
 
 .text--medium {
   font-size: 24px;
-  font-size: calc(16px + (24 - 16) * ((100vw - 320px) / (1440 - 320)));
+  font-size: calc(16px + (24 - 16) * ((100vw - 320px) / (1980 - 320)));
   font-weight: 400;
 }
 
 .text--small {
   font-size: 18px;
   font-weight: 400;
+}
+
+.text--lg {
+  font-size: calc(24px + (54 - 24) * ((100vw - 320px) / (1980 - 320)));
 }
 
 @media screen and (max-width: 320px) {
@@ -113,9 +117,12 @@
   .text--medium {
     font-size: 16px;
   }
+  .text--lg {
+    font-size: 24px;
+  }
 }
 
-@media screen and (min-width: 1440px) {
+@media screen and (min-width: 1980px) {
   .header__title {
     font-size: 80px;
   }
@@ -127,6 +134,9 @@
   }
   .text--medium {
     font-size: 24px;
+  }
+  .text--lg {
+    font-size: 54px;
   }
 }
 
@@ -473,6 +483,19 @@
   font-size: 24px;
 }
 
+.open-source__wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
 .open-source__image {
   height: 100px;
   display: -webkit-box;
@@ -491,8 +514,139 @@
   max-height: 100%;
 }
 
+.open-source__content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  -ms-flex-negative: 1;
+      flex-shrink: 1;
+}
+
 .open-source__content * {
   margin: 1rem;
+}
+
+.open-source__content .btn {
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+}
+
+@media screen and (min-width: 1000px) {
+  .open-source__content .btn {
+    -ms-flex-item-align: end;
+        align-self: flex-end;
+  }
+  .open-source__image {
+    margin-left: 1rem;
+    height: 100%;
+  }
+  .open-source__wrapper {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+  }
+  .open-source__image {
+    -webkit-box-ordinal-group: 3;
+        -ms-flex-order: 2;
+            order: 2;
+  }
+}
+
+.text--about {
+  font-weight: 700;
+  opacity: .6;
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+.text--blue {
+  color: #0F8AA6;
+}
+
+.list__about {
+  font-size: 20px;
+}
+
+.list__about li {
+  margin-bottom: 1.5em;
+}
+
+.about {
+  padding: 1rem;
+}
+
+.tech img {
+  height: 100px;
+}
+
+.img--profile {
+  max-height: 180px;
+  border-radius: 50%;
+}
+
+.social-links {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding: 0 40px;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.card--profile {
+  -ms-grid-rows: 250px 170px 80px;
+      grid-template-rows: 250px 170px 80px;
+}
+
+.social {
+  height: 50px;
+  opacity: .7;
+  -webkit-transition: opacity .3s ease;
+  transition: opacity .3s ease;
+}
+
+.social:hover {
+  opacity: .9;
+}
+
+@media screen and (min-width: 768px) {
+  .list__about {
+    font-size: 24px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .about__wrapper {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .about__left {
+    max-width: 50%;
+    padding: 1.5rem;
+  }
+  .text--about {
+    margin: 0;
+  }
 }
 
 .header {

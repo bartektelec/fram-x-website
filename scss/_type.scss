@@ -7,13 +7,13 @@
 .header__subtitle {
     margin-bottom: 1rem;
     font-weight: 700;
-    font-size: calc(18px + (32 - 18) * ((100vw - 320px) / (1440 - 320)));
+    font-size: calc(18px + (32 - 18) * ((100vw - 320px) / (1980 - 320)));
 }
 
 
 .header__title {
     margin-bottom: 1rem;
-    font-size: calc(40px + (80 - 40) * ((100vw - 320px) / (1440 - 320)));
+    font-size: calc(40px + (80 - 40) * ((100vw - 320px) / (1980 - 320)));
     font-weight: 700;
 }
 
@@ -32,7 +32,7 @@
 
 .text--subtitle {
     @extend .centered;
-    font-size: calc(20px + (32 - 20) * ((100vw - 320px) / (1440 - 320)));
+    font-size: calc(20px + (32 - 20) * ((100vw - 320px) / (1980 - 320)));
 
     margin: 1em;
     font-weight: 700;
@@ -44,7 +44,7 @@
 
 .text--medium {
     font-size: 24px;
-    font-size: calc(16px + (24 - 16) * ((100vw - 320px) / (1440 - 320)));
+    font-size: calc(16px + (24 - 16) * ((100vw - 320px) / (1980 - 320)));
 
     font-weight: 400;
 }
@@ -52,6 +52,10 @@
 .text--small {
     font-size: 18px;
     font-weight: 400;
+}
+
+.text--lg {
+    font-size: calc(24px + (54 - 24) * ((100vw - 320px) / (1980 - 320)));
 }
 
 @media screen and (max-width: 320px) {
@@ -71,9 +75,13 @@
     .text--medium {
         font-size: 16px;
     }
+
+    .text--lg {
+        font-size: 24px;
+    }
 }
 
-@media screen and (min-width: 1440px) {
+@media screen and (min-width: 1980px) {
 
     .header__title {
         font-size: 80px;
@@ -89,5 +97,9 @@
 
     .text--medium {
         font-size: 24px;
+    }
+
+    .text--lg {
+        font-size: 54px;
     }
 }
