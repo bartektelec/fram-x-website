@@ -58,6 +58,10 @@
     font-size: calc(24px + (54 - 24) * ((100vw - 320px) / (1980 - 320)));
 }
 
+.text--bold {
+    font-weight: 700;
+}
+
 @media screen and (max-width: 320px) {
 
     .header__title {

@@ -21,9 +21,12 @@
 .about__right {}
 
 .about {
-    padding: 1rem;
+    padding: 0 1rem;
 }
 
+.tech:hover {
+    opacity: .7;
+}
 
 .tech img {
     height: 100px;
@@ -53,8 +56,13 @@
     transition: opacity .3s ease;
 }
 
+
 .social:hover {
     opacity: .9;
+}
+
+.contact {
+    padding: 1rem;
 }
 
 @media screen and (min-width: 768px) {

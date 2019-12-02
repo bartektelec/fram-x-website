@@ -20,11 +20,11 @@
 .btn--lg {
     padding: 1em 3em;
     color: var(--white);
-    background-image: var(--gradient-purple);
+    background-color: var(--color-1);
     border: none;
 
     &:hover {
-        filter: brightness(1) hue-rotate(-10deg);
+        background-color: var(--color-2);
     }
 }
 

@@ -20,7 +20,7 @@
             <div class="nav__logo">
                 <a href="#top"><img src="img/svg/logo.svg" alt="Fram X brand logo"></a>
             </div>
-            <input type="checkbox" id="nav__collapse" class="menu__checkbox">
+            <input type="checkbox" id="nav__collapse" class="menu__checkbox" aria-hidden>
             <label for="nav__collapse" class="menu__button">
                 <div class="burger__bar"></div>
                 <div class="burger__bar"></div>
@@ -34,7 +34,7 @@
             </ul>
         </div>
     </nav>
-    <header id="top" class="header" role="heading">
+    <header id="top" class="header">
         <div class="container header__wrapper">
             <div class="header__left">
                 <p class="header__subtitle">There should be an app for that!</p>
@@ -73,6 +73,18 @@
                             <p class="text--small">iOS, Android</p>
                     </header>
                     <a href="#" class="btn btn--card">Show more</a>
+                    <div class="card__overlay">
+                        <h4 class="card__title">Camp Extra</h3>
+                            <p class="text--medium">Get it from</p>
+
+
+                            <a href="https://campextra.no/"><img src="img/svg/appstores/apple.png"
+                                    alt="Apple AppStore download button" class="appstore"></a>
+                            <a
+                                href="https://play.google.com/store/apps/details?id=no.snapper.coop.extra.tiltopps&hl=no"><img
+                                    src="img/svg/appstores/google.png" alt="Google play store download button"
+                                    class="appstore"></a>
+                    </div>
                 </section>
                 <!-- // CARD ENDS HERE -->
 
@@ -86,7 +98,18 @@
                             <p class="text--small">iOS, Android</p>
                     </header>
                     <a href="#" class="btn btn--card">Show more</a>
+                    <div class="card__overlay">
+                        <h4 class="card__title">Morgenlevering</h3>
+                            <p class="text--medium">Get it from</p>
 
+
+                            <a href="https://apps.apple.com/us/app/morgenlevering/id1372072096"><img
+                                    src="img/svg/appstores/apple.png" alt="Apple AppStore download button"
+                                    class="appstore"></a>
+                            <a href="https://play.google.com/store/apps/details?id=no.di.morgenlevering&hl=en_US"><img
+                                    src="img/svg/appstores/google.png" alt="Google play store download button"
+                                    class="appstore"></a>
+                    </div>
                 </section>
                 <section class="card">
                     <div class="card__top">
@@ -94,12 +117,23 @@
                         <img src="img/logo/sykehus.png" alt="Sykehuspartner logo" class="card__image">
                     </div>
                     <header>
-                        <h4 class="card__title">Veileder for akuttpsykiatri</h3>
+                        <h4 class="card__title">Veileder i akuttpsykiatri</h3>
                             <p class="text--medium">Sykehuspartner</p>
                             <p class="text--small">iOS, Android</p>
                     </header>
                     <a href="#" class="btn btn--card">Show more</a>
+                    <div class="card__overlay">
+                        <h4 class="card__title">Veileder i akuttpsykiatri</h3>
+                            <p class="text--medium">Get it from</p>
 
+
+                            <a href="https://apps.apple.com/no/app/veileder-i-akuttpsykiatri/id1077794196"><img
+                                    src="img/svg/appstores/apple.png" alt="Apple AppStore download button"
+                                    class="appstore"></a>
+                            <a href="https://play.google.com/store/apps/details?id=com.so.hf.vap.droid&hl=no"><img
+                                    src="img/svg/appstores/google.png" alt="Google play store download button"
+                                    class="appstore"></a>
+                    </div>
                 </section>
             </section>
             <h3 class="text--subtitle">Open-source projects</h3>
@@ -207,8 +241,8 @@
                 <li><a href="#about" class="text--medium">About</a></li>
                 <li><a href="#contact" class="text--medium">Contact</a></li>
             </ul>
-            <address>
-                <ul class="footer__list">
+            <address class="footer__list">
+                <ul>
                     <li class="text--medium text--bold">Address</li>
                     <li class="text--medium">Fram X</li>
                     <li class="text--medium">c/o Spaces</li>
@@ -219,23 +253,23 @@
             <div class="footer__map">
                 <p class="text--medium text--bold">Map location</p>
                 <div class="mapouter">
-                    <div class="gmap_canvas"><iframe width="600" height="500" id="gmap_canvas"
-                            src="https://maps.google.com/maps?q=Tollbugata%208a%2C%20Oslo&t=&z=17&ie=UTF8&iwloc=&output=embed"
+                    <div class="gmap_canvas"><iframe width="450" height="380" id="gmap_canvas"
+                            src="https://maps.google.com/maps?q=tollbugata%208a&t=&z=15&ie=UTF8&iwloc=&output=embed"
                             frameborder="0" scrolling="no" marginheight="0" marginwidth="0"></iframe><a
                             href="https://www.embedgooglemap.net">embedgooglemap.net</a></div>
                     <style>
                         .mapouter {
                             position: relative;
                             text-align: right;
-                            height: 500px;
-                            width: 600px;
+                            height: 380px;
+                            width: 450px;
                         }
 
                         .gmap_canvas {
                             overflow: hidden;
                             background: none !important;
-                            height: 500px;
-                            width: 600px;
+                            height: 380px;
+                            width: 450px;
                         }
                     </style>
                 </div>

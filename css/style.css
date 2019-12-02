@@ -5,8 +5,8 @@
   font-family: "Raleway", sans-serif;
   --primary: #1D3240;
   --white: #ffffff;
-  --color-1: #AF17FF;
-  --color-2: #CA1CC4;
+  --color-1: #1188FF;
+  --color-2: #076ED5;
   --gradient-purple: linear-gradient(60deg, var(--color-1), var(--color-2));
 }
 
@@ -102,6 +102,10 @@
 
 .text--lg {
   font-size: calc(24px + (54 - 24) * ((100vw - 320px) / (1980 - 320)));
+}
+
+.text--bold {
+  font-weight: 700;
 }
 
 @media screen and (max-width: 320px) {
@@ -321,13 +325,12 @@
 .btn--lg {
   padding: 1em 3em;
   color: var(--white);
-  background-image: var(--gradient-purple);
+  background-color: var(--color-1);
   border: none;
 }
 
 .btn--lg:hover {
-  -webkit-filter: brightness(1) hue-rotate(-10deg);
-          filter: brightness(1) hue-rotate(-10deg);
+  background-color: var(--color-2);
 }
 
 .btn--nav {
@@ -449,6 +452,58 @@
   display: grid;
   -ms-grid-rows: 170px 170px 80px;
       grid-template-rows: 170px 170px 80px;
+  position: relative;
+  overflow: hidden;
+}
+
+.card__overlay {
+  z-index: 10;
+  position: absolute;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  text-align: center;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: -100px;
+  background-color: #fff;
+  opacity: 0;
+  -webkit-transform: translateY(-100%);
+          transform: translateY(-100%);
+  padding: 40px 40px 140px 40px;
+  cursor: pointer;
+  -webkit-transition: opacity .2s .1s ease, -webkit-transform .3s ease;
+  transition: opacity .2s .1s ease, -webkit-transform .3s ease;
+  transition: opacity .2s .1s ease, transform .3s ease;
+  transition: opacity .2s .1s ease, transform .3s ease, -webkit-transform .3s ease;
+}
+
+.card:hover .card__overlay {
+  -webkit-transform: translateY(0);
+          transform: translateY(0);
+  opacity: 1;
+}
+
+.appstore {
+  width: 100%;
+  opacity: .7;
+  -webkit-transition: opacity .2s ease;
+  transition: opacity .2s ease;
+}
+
+.appstore:hover {
+  opacity: 1;
 }
 
 .card header,
@@ -467,7 +522,7 @@
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  border-bottom: 1px solid black;
+  border-bottom: 1px solid #aaaaaa;
 }
 
 .card__image {
@@ -549,6 +604,7 @@
   }
   .open-source__image {
     margin-left: 1rem;
+    margin-bottom: 0;
     height: 100%;
   }
   .open-source__wrapper {
@@ -584,7 +640,11 @@
 }
 
 .about {
-  padding: 1rem;
+  padding: 0 1rem;
+}
+
+.tech:hover {
+  opacity: .7;
 }
 
 .tech img {
@@ -625,6 +685,10 @@
   opacity: .9;
 }
 
+.contact {
+  padding: 1rem;
+}
+
 @media screen and (min-width: 768px) {
   .list__about {
     font-size: 24px;
@@ -646,6 +710,67 @@
   }
   .text--about {
     margin: 0;
+  }
+}
+
+.footer {
+  background-color: var(--primary);
+  font-size: 24px;
+  line-height: 29px;
+  padding-bottom: 1rem;
+}
+
+a.text--medium {
+  -webkit-transition: opacity .3s ease;
+  transition: opacity .3s ease;
+}
+
+a.text--medium:hover {
+  opacity: .8;
+}
+
+.footer * {
+  color: var(--white);
+  text-decoration: none;
+  font-style: normal;
+}
+
+.footer .container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -ms-flex-line-pack: baseline;
+      align-content: baseline;
+}
+
+.footer__list,
+.footer__map {
+  display: block;
+  padding: 3.5rem 0;
+}
+
+.gmap_canvas {
+  border-radius: 25px;
+}
+
+@media screen and (min-width: 1000px) {
+  .footer .container {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+  }
+  .footer__list,
+  .footer__map {
+    width: 30%;
   }
 }
 
