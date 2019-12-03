@@ -1,12 +1,12 @@
 .partners {
     margin: .5rem 0;
-    background-color: var(--primary);
+    background-color: $primary;
 }
 
 .partners__wrapper {
     display: flex;
     // padding: 1rem;
-    justify-content: space-evenly;
+    justify-content: space-around;
     flex-wrap: wrap;
 }
 

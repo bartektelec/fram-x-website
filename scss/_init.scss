@@ -1,4 +1,9 @@
 $baseFontSize : 16;
+$primary: #1D3240;
+$white: #ffffff;
+$color-1: #1188FF;
+$color-2: #076ED5;
+$gradient-purple: linear-gradient(60deg, $color-1, $color-2);
 
 @function rem($pixels, $context: $baseFontSize) {
     @if (unitless($pixels)) {
@@ -15,11 +20,12 @@ $baseFontSize : 16;
 :root {
     font-size: $baseFontSize+px;
     font-family: "Raleway", sans-serif;
+
     --primary: #1D3240;
     --white: #ffffff;
     --color-1: #1188FF;
     --color-2: #076ED5;
-    --gradient-purple: linear-gradient(60deg, var(--color-1), var(--color-2));
+    --gradient-purple: linear-gradient(60deg, $color-1, $color-2);
 }
 
 
@@ -28,7 +34,7 @@ $baseFontSize : 16;
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    color: var(--primary);
+    color: $primary;
     text-decoration: none;
     list-style: none;
     max-width: 100%;

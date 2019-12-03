@@ -33,3 +33,21 @@
         grid-column: 2 / 3;
     }
 }
+
+// INTERNET EXPLORER FIXES
+@media all and (-ms-high-contrast: none),
+(-ms-high-contrast: active) {
+    .header__wrapper {
+        display: block;
+    }
+
+    .header__left {
+        display: inline-block;
+        width: 70%;
+    }
+
+    .header__right {
+        display: inline-block;
+        width: 29%;
+    }
+}
