@@ -58,18 +58,23 @@
 }
 
 
-.card header,
+.card__header,
 .card__top {
     padding: 40px 0;
     margin: 0 40px;
 }
 
 .card__top {
+    grid-row: 1 / 2;
     display: flex;
     justify-content: center;
     align-items: center;
     border-bottom: 1px solid #aaaaaa;
 
+}
+
+.card__header {
+    grid-row: 2 / 3;
 }
 
 .card__image {
@@ -102,7 +107,7 @@
 }
 
 .open-source__image img {
-    max-height: 100%;
+    max-height: 250px;
 }
 
 .open-source__content {
@@ -110,7 +115,6 @@
     flex-direction: column;
     justify-content: flex-start;
     align-items: flex-start;
-    flex-shrink: 1;
 }
 
 .open-source__content * {
@@ -133,7 +137,9 @@
         height: 100%;
     }
 
-    .open-source__content {}
+    .open-source__content {
+        max-width: 80%;
+    }
 
     .open-source__wrapper {
         flex-direction: row;
