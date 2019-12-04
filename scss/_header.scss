@@ -19,7 +19,7 @@
     background-repeat: no-repeat;
     background-size: contain;
     background-position: center 80%;
-    background-image: url("/img/svg/shadow.png");
+    background-image: url("../img/svg/shadow.png");
 }
 
 @media screen and (min-width: 760px) {
@@ -50,4 +50,38 @@
         display: inline-block;
         width: 29%;
     }
+
+    .open-source__content {
+        display: inline-block;
+        width: 80%;
+    }
+
+    .open-source__image {
+        display: inline-block;
+        width: 19%;
+
+        & img {
+            max-height: auto;
+        }
+    }
+
+    .about__left {
+        max-width: auto;
+    }
+
+    .card__top {
+        display: block;
+        text-align: center;
+    }
+
+    .card__overlay {
+        display: block;
+
+        &>* {
+            display: block;
+            margin-bottom: .5rem;
+        }
+    }
+
+
 }

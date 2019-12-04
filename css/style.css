@@ -395,7 +395,7 @@
   background-repeat: no-repeat;
   background-size: contain;
   background-position: center 80%;
-  background-image: url("/img/svg/shadow.png");
+  background-image: url("../img/svg/shadow.png");
 }
 
 @media screen and (min-width: 760px) {
@@ -425,6 +425,31 @@
   .header__right {
     display: inline-block;
     width: 29%;
+  }
+  .open-source__content {
+    display: inline-block;
+    width: 80%;
+  }
+  .open-source__image {
+    display: inline-block;
+    width: 19%;
+  }
+  .open-source__image img {
+    max-height: auto;
+  }
+  .about__left {
+    max-width: auto;
+  }
+  .card__top {
+    display: block;
+    text-align: center;
+  }
+  .card__overlay {
+    display: block;
+  }
+  .card__overlay > * {
+    display: block;
+    margin-bottom: .5rem;
   }
 }
 
@@ -479,6 +504,8 @@
   display: grid;
   -ms-grid-rows: 170px 170px 80px;
       grid-template-rows: 170px 170px 80px;
+  -ms-grid-columns: 100% 100% 100%;
+      grid-template-columns: 100% 100% 100%;
   position: relative;
   overflow: hidden;
 }
@@ -602,7 +629,7 @@
 }
 
 .open-source__image img {
-  max-height: 250px;
+  max-height: 100%;
 }
 
 .open-source__content {
