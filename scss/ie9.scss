@@ -1,0 +1,83 @@
+img {
+    border: none;
+}
+
+.menu__item {
+    display: inline-block;
+}
+
+.nav__menu {
+    width: 60%;
+    float: right;
+    text-align: right;
+}
+
+.nav__logo {
+    width: 100px;
+    float: left;
+}
+
+.header__left {
+    width: 60%;
+    float: left;
+}
+
+.header__right {
+    width: 29%;
+    float: right;
+}
+
+.card {
+    display: inline-block;
+    // max-width: 30%;
+    margin: 10px;
+}
+
+.open-source__image {
+    width: 20%;
+    float: right;
+}
+
+.contact {
+    text-align: center;
+}
+
+.partners__wrapper {
+    text-align: center;
+}
+
+.cards__wrapper.tech__wrapper {
+    display: block;
+}
+
+.about__left {
+    display: inline-block;
+}
+
+.about__right {
+    display: inline-block;
+    width: 49%;
+}
+
+.cards__wrapper {
+    // display: inline-block;
+    text-align: center;
+
+    &>* {
+        display: inline-block;
+    }
+}
+
+.footer__list {
+    width: 30%;
+    display: inline-block;
+}
+
+
+
+.container::after,
+.cards__wrapper::after {
+    content: "";
+    clear: both;
+    display: table;
+}
