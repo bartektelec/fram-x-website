@@ -15,3 +15,64 @@
     padding-top: 6rem;
     padding-bottom: 4rem;
 }
+
+// INTERNET EXPLORER FIXES
+@media all and (-ms-high-contrast: none),
+(-ms-high-contrast: active) {
+    .header__wrapper {
+        display: block;
+    }
+
+    .header__left {
+        display: inline-block;
+        width: 70%;
+    }
+
+    .header__right {
+        display: inline-block;
+        width: 29%;
+    }
+
+    .open-source__content {
+        display: inline-block;
+        width: 80%;
+    }
+
+    .open-source__image {
+        display: inline-block;
+        width: 19%;
+
+        & img {
+            max-height: auto;
+        }
+    }
+
+    .about__left {
+        max-width: 100%;
+    }
+
+    .card__top {
+        display: block;
+        text-align: center;
+        position: relative;
+
+    }
+
+    .card__image {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+
+    .card__overlay {
+        display: block;
+
+        &>* {
+            display: block;
+            margin-bottom: .5rem;
+        }
+    }
+
+
+}
