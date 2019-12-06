@@ -5,6 +5,7 @@ $color-1: #1188FF;
 $color-2: #076ED5;
 $gradient-purple: linear-gradient(60deg, $color-1, $color-2);
 
+
 @function rem($pixels, $context: $baseFontSize) {
     @if (unitless($pixels)) {
         $pixels: $pixels * 1px;
