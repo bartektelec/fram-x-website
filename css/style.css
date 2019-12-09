@@ -5,8 +5,8 @@
   font-family: "Raleway", sans-serif;
   --primary: #1D3240;
   --white: #ffffff;
-  --color-1: #1188FF;
-  --color-2: #076ED5;
+  --color-2: #1188FF;
+  --color-1: #076ED5;
   --gradient-purple: linear-gradient(60deg, $color-1, $color-2);
 }
 
@@ -313,13 +313,13 @@
   font-weight: 700;
   padding: .5em 2em;
   border-radius: 1.5em;
-  border: 2px solid #1188FF;
+  border: 2px solid #0773DF;
   -webkit-transition: all .2s ease;
   transition: all .2s ease;
 }
 
 .btn:hover {
-  background-color: #1188FF;
+  background-color: #0773DF;
   color: #ffffff;
 }
 
@@ -330,12 +330,12 @@
 .btn--lg {
   padding: 1em 3em;
   color: #ffffff;
-  background-color: #1188FF;
+  background-color: #0773DF;
   border: none;
 }
 
 .btn--lg:hover {
-  background-color: #076ED5;
+  background-color: #1188FF;
 }
 
 .btn--nav {
@@ -400,7 +400,7 @@
   background-repeat: no-repeat;
   background-size: contain;
   background-position: center 80%;
-  background-image: url("../img/svg/shadow.png");
+  background-image: url("../img/svg/shadow.svg");
 }
 
 @media screen and (min-width: 760px) {
