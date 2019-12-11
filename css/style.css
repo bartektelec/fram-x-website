@@ -3,11 +3,6 @@
 :root {
   font-size: 16px;
   font-family: "Raleway", sans-serif;
-  --primary: #1D3240;
-  --white: #ffffff;
-  --color-2: #1188FF;
-  --color-1: #076ED5;
-  --gradient-purple: linear-gradient(60deg, $color-1, $color-2);
 }
 
 * {
@@ -438,8 +433,10 @@
   opacity: .6;
   height: 1.5rem;
   margin: .725rem 1.5rem;
-  -webkit-transition: opacity filter .3s ease;
-  transition: opacity filter .3s ease;
+  -webkit-transition: opacity .3s ease, -webkit-filter .3s ease;
+  transition: opacity .3s ease, -webkit-filter .3s ease;
+  transition: opacity .3s ease, filter .3s ease;
+  transition: opacity .3s ease, filter .3s ease, -webkit-filter .3s ease;
 }
 
 .partner:hover {
@@ -831,7 +828,7 @@ a.text--medium:hover {
     width: 19%;
   }
   .open-source__image img {
-    max-height: auto;
+    max-height: 100%;
   }
   .about__left {
     max-width: 100%;

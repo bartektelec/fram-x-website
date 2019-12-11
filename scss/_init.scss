@@ -21,12 +21,6 @@ $gradient-purple: linear-gradient(60deg, $color-1, $color-2);
 :root {
     font-size: $baseFontSize+px;
     font-family: "Raleway", sans-serif;
-
-    --primary: #1D3240;
-    --white: #ffffff;
-    --color-2: #1188FF;
-    --color-1: #076ED5;
-    --gradient-purple: linear-gradient(60deg, $color-1, $color-2);
 }
 
 
